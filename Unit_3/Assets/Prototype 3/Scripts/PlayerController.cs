@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float gravityModifier;
     public bool isGrounded = true;
+    public bool gameOver = false;
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
