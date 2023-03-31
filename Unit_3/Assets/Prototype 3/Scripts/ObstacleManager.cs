@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-    public GameObject obstaclePrefab;
+    public GameObject[] obstaclePrefabs;
+    public PlayerController playerControllerScript;
     private Vector3 obstaclePos = new Vector3(25, 0, 0);
     private float startDelay = 2;
     private float startRate = 2;
-    public PlayerController playerControllerScript;
+    private int randomObstacle;
     void Start()
     {
         InvokeRepeating("CreateObstacle", startDelay, startRate);
@@ -18,7 +19,8 @@ public class ObstacleManager : MonoBehaviour
     {
         if (playerControllerScript.gameOver == false)
         {
-            Instantiate(obstaclePrefab, obstaclePos, obstaclePrefab.transform.rotation);
+            randomObstacle = Random.Range(0, obstaclePrefabs.Length);
+            Instantiate(obstaclePrefabs[randomObstacle], obstaclePos, obstaclePrefabs[randomObstacle].transform.rotation);
         }
     }
 }

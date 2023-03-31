@@ -261,8 +261,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33886dfc43968494d8dc5ef487f692d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 4150352892564136322, guid: 468e4d3308cc5a343a1c27a6978d6fe5, type: 3}
-  playerControllerScript: {fileID: 0}
+  obstaclePrefabs:
+  - {fileID: 3071973800879992367, guid: 241013c62669e3c4cbfc89d33525316e, type: 3}
+  - {fileID: 8716569123287163687, guid: 9ec8fc67e3238d04591f334788597763, type: 3}
+  - {fileID: 7199806201022279808, guid: 468e4d3308cc5a343a1c27a6978d6fe5, type: 3}
+  - {fileID: 9030715400572065467, guid: b1332791b0006d14899b5f2700d03ecb, type: 3}
+  playerControllerScript: {fileID: 1867565211}
 --- !u!1001 &318295628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -770,6 +774,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f8d00bf5057f624e949aef802595da9, type: 3}
+--- !u!1 &1771177464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1771177466}
+  - component: {fileID: 1771177465}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1771177465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771177464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2801ded54a764dd49bdb57cb3c8e940b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+--- !u!4 &1771177466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771177464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.2144852, y: 4.7867713, z: -4.246133}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1867565210 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2f8d00bf5057f624e949aef802595da9, type: 3}
@@ -795,6 +844,9 @@ MonoBehaviour:
   dirtParticle: {fileID: 891801705}
   jumpSound: {fileID: 8300000, guid: 113ee460fadc340e4957a7404a9fbb27, type: 3}
   crashSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
+  doubleJumpUsed: 0
+  doubleJumpForce: 15
+  doubleSpeed: 0
 --- !u!65 &1867565212
 BoxCollider:
   m_ObjectHideFlags: 0
